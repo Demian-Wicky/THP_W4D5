@@ -13,4 +13,13 @@ class Gossip
     end
   end
 
+  def self.all
+    all_gossips = []
+    CSV.foreach("db/gossip.csv") do |row|
+      gossip_provisoire = Gossip.new(row[0] , row[1])
+      all_gossips << gossip_provisoire
+    end
+    return all_gossips
+  end
+
 end

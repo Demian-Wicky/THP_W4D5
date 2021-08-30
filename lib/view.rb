@@ -11,4 +11,10 @@ class View
     return params = { content: content, author: author }
   end
 
+  def index_gossips(gossips)
+    gossips.each_with_index do |gossip, index|
+      puts "#{index+1} ->  #{gossip.author}    #{gossip.content}".blue
+    end
+  end
+
 end

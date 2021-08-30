@@ -15,4 +15,9 @@ class Controller
     puts "Gossip sauvegardé".green
   end
 
+  def index_gossips
+    gossips = Gossip.all
+    @view.index_gossips(gossips)
+  end
+
 end
