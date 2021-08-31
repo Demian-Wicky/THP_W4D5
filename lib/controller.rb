@@ -20,4 +20,9 @@ class Controller
     @view.index_gossips(gossips)
   end
 
+  def delete_gossip
+    idx = @view.delete_gossip
+    Gossip.delete_gossip(idx)
+  end
+
 end

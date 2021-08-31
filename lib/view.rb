@@ -17,4 +17,10 @@ class View
     end
   end
 
+  def delete_gossip
+    puts "Quel gossip souhaite tu supprimer ?"
+    index = gets.chomp.to_i
+    return index
+  end
+
 end
